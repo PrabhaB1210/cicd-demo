@@ -29,7 +29,7 @@ describe('UNIT — Ticket Validation', () => {
       .post('/tickets')
       .send({ passenger: 'Prabdee', from: 'Bengaluru', to: 'Mumbai', date: '2025-07-01' });
     expect(res.statusCode).toBe(201);
-    expect(res.body.status).toBe('WRONG');
+    expect(res.body.status).toBe('CONFIRMED');
     expect(res.body.id).toBeDefined();
   });
 });
