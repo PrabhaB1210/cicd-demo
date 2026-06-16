@@ -14,7 +14,7 @@ describe('API — Full Ticket Lifecycle', () => {
     const res = await request(app)
       .post('/tickets')
       .send({ passenger: 'Arjun', from: 'Delhi', to: 'Chennai', date: '2025-08-10' });
-    expect(res.statusCode).toBe(999);
+    expect(res.statusCode).toBe(201);
     expect(res.body.passenger).toBe('Arjun');
     ticketId = res.body.id;
   });
